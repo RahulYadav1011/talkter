@@ -3,7 +3,10 @@
 <body>
 
 <h2>The XMLHttpRequest Object</h2>
-<button type="button" onclick="loadDoc()">Request data</button>
+<button type="button" onclick="loadDoc()">Create Account</button>
+
+ <p style="margin-top:20px;">Check to Get Some Data <p>
+  <button type="button" onclick="handleClick()> Get Account</button>
 
 <p id="demo"></p>
  
@@ -17,6 +20,16 @@ function loadDoc() {
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("fname=Henry&lname=Ford");
 }
+
+  function  handleClick() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "https://toletplus3-dev-ed.develop.my.site.com/services/apexrest/shopyfyAccountSync");
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+   }
 </script>
 
 </body>
