@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+ 
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("POST", "https://toletplus3-dev-ed.develop.my.site.com/services/apexrest/shopyfyAccountSync");
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.setRequestHeader("Origin","https://www.w3schools.com");
+  xhttp.send("fname=Henry&lname=Ford");
+}
+</script>
+
+</body>
+</html>
