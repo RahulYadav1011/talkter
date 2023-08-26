@@ -22,13 +22,13 @@ function loadDoc() {
 }
 
   function  handleClick() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
+  const xhttp1 = new XMLHttpRequest();
+  xhttp1.onload = function() {
     document.getElementById("demo").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "https://toletplus3-dev-ed.develop.my.site.com/services/apexrest/shopyfyAccountSync");
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
+  xhttp1.open("GET", "https://toletplus3-dev-ed.develop.my.site.com/services/apexrest/shopyfyAccountSync");
+  xhttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+ xhttp1.send();
    }
 </script>
 
